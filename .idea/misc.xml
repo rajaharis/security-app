@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_home_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_live_stream.xml" value="0.12" />
+        <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_signup.xml" value="0.20416666666666666" />
         <entry key="..\:/portfolio/BHMS/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17864583333333334" />
       </map>
