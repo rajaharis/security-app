@@ -8,14 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -27,7 +25,6 @@ public class signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
         Button signup = (Button) findViewById(R.id.signup);
 
         signup.setOnClickListener(v -> {
@@ -47,22 +44,30 @@ public class signup extends AppCompatActivity {
 
             }
             else {
-                SignUp();
+                Intent intent = new Intent(signup.this, HomeScreen.class);
+                startActivity(intent);
+
+//                SignUp();
             }
 
         });
     }
-    private void SignUp() {
+
+    private  void SignUp() {
         EditText id = findViewById(R.id.email);
         String email = id.getText().toString().trim();
         EditText pass = findViewById(R.id.password);
         String password = pass.getText().toString().trim();
 
-        final StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.100.9:5000/user/api/signup",
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url = "http://192.168.100.9:5000/api/signup";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.e("anyText", response);
+                        // Display the first 500 characters of the response string.
+                        Log.e("Response is: " ,response);
                         try {
                             JSONObject jsonObject = new JSONObject(response);
 
@@ -81,13 +86,15 @@ public class signup extends AppCompatActivity {
 
 
                     }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), "Error while creating account", Toast.LENGTH_LONG).show();
-                    }
-                }) {
+
+
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+               Log.e("That didn't work!", String.valueOf(error));
+            }
+        })
+        {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
@@ -96,17 +103,10 @@ public class signup extends AppCompatActivity {
                 return params;
             }
         };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-
+       //quest to the RequestQueue.
+        queue.add(stringRequest);
 
     }
-
-
-
-
-
-
 
     public void loginPage(View view) {
         Intent intent = new Intent(signup.this, MainActivity.class);
