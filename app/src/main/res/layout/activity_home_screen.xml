@@ -55,6 +55,7 @@
         android:layout_height="72dp"
         android:background="@drawable/corder_radius"
         android:text="Captured Images"
+        android:onClick="IntruderImage"
         android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"

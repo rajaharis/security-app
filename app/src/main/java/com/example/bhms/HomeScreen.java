@@ -25,4 +25,9 @@ public class HomeScreen extends AppCompatActivity {
         Intent intent = new Intent(HomeScreen.this, LiveStream.class);
         startActivity(intent);
     }
+
+    public void IntruderImage(View view) {
+        Intent intent = new Intent(HomeScreen.this, IntruderImage.class);
+        startActivity(intent);
+    }
 }
