@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_home_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_intruder_image.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_live_stream.xml" value="0.12" />
         <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/layout/activity_signup.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/danis/AndroidStudioProjects/HomeSecurity/app/src/main/res/xml/network_security_config.xml" value="1.4" />
         <entry key="..\:/portfolio/BHMS/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_live_stream.xml" value="0.16770833333333332" />

@@ -8,11 +8,7 @@
 
 
     <VideoView
-        android:id="@+id/video_stream"
-        android:layout_width="395dp"
-        android:layout_height="812dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/videoview"/>
 </android.support.constraint.ConstraintLayout>
