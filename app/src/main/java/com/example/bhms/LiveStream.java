@@ -1,6 +1,5 @@
 package com.example.bhms;
 
-import android.app.ProgressDialog;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,23 +10,28 @@ import android.widget.VideoView;
 
 public class LiveStream extends AppCompatActivity {
 
-    VideoView video ;
-    String video_url= "" ;
+//    VideoView video ;
+//    String video_url= "" ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_stream);
 
-        video =(VideoView)findViewById(R.id.video_stream);
-        String videoPath = "https://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4";
-        Uri uri = Uri.parse(videoPath);
-        video.setVideoURI(uri);
+        VideoView videoView = (VideoView) findViewById(R.id.videoview);
 
+        //Attach a media controller to video view
         MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(video);
-        video.setMediaController(mediaController);
+        videoView.setMediaController(mediaController);
+        mediaController.setAnchorView(videoView);
 
-        video.start();
+        //add your video URL
+        Uri  uri = Uri.parse("https://www.youtube.com/watch?v=90hWWAqfdUU&ab_channel=TechProgrammingIdeas");
+
+
+        videoView.setVideoURI(uri);
+        videoView.requestFocus();
+        videoView.start();
+
     }
 }
